@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="carousel">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="8200">
+                <img src="{% static 'img/carousel1.png'%}" class="d-block w-100 " alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="4800">
+                <img src="{% static 'img/carousel2.png'%}img/carousel2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="4800">
+                <img src="{% static 'img/carousel3.png'%}img/carousel3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="4800">
+                <img src="{% static 'img/carousel4.png'%}img/carousel4.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="4800">
+                <img src="{% static 'img/carousel5.png'%}" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+</div>
+<div id="borde">
+    <div class="text-center">
+        <img src="{% static 'img/JuanCamilo.png'%}" class="rounded" style="width:max-content ;margin: 50px;width: 40%;" alt="..."> <br>      
+        
+            <p class="text">
+                <b> F&E CORP </b> es una compañía la cual busca la buena posicion en el mercado al buscar nuevas alternativas de negocio....
+    </div>
+</div>

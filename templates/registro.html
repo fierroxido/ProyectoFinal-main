@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section id="boletin">
+    <div class="contenedor">
+        <h1>Registrarse</h1>
+    </div>
+</section>
+<section id="principal">
+    <div class="contenedor">
+       
+            <h1></h1>
+            <form action="#" target="" method="get" name="formDatosPersonales">
+                <label for="nombre">Nombres</label>
+                <input type="text" name="Nombres" id="nombre" placeholder="Escribe tus nombres"/>
+            
+                <label for="email" >Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" required />
+
+                <label for="asunto">Contraseña</label>
+                <input type ="text" name="password" id="password" placeholder="Contraseña"/>
+            
+                <label for="asunto">Confirmar contraseña</label>
+                <input type ="text" name="confirmPassword" id="confirmPassword" placeholder="Confirmar contraseña"/>
+            
+                
+                <input type="submit" name="Registrarse" value="Registrarse"/>
+            </form>
+       
+    </div>
+</section>
+{% endblock %}

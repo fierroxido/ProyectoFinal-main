@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+    <section id="boletin">
+        <div class="contenedor">
+            <h1>Contáctenos</h1>
+        </div>
+    </section>
+
+    <!-- ale -->
+    <div class="separadores">
+        <h2> INGRESO </h2>
+    </div>
+
+    <section id="principal">
+        <div class="contenedor">
+
+            <form class="form-register" action="{%url 'login' %}" method="POST">
+                {% csrf_token %}
+                <div class="caja-for">
+                    <!-- <input class="controls" type="text" name="first_name" id="nombres" placeholder="Escriba su Nombre"> -->
+                    <!-- <input class="controls" type="text" name="last_name" id="apellidos" placeholder="Escriba su Apellido"> -->
+                    <input class="controls" type="email" name="email" id="email" placeholder="Escriba su Correo">
+                    <input class="controls" type="password" name="password" id="contraseña" placeholder="Escriba su Contraseña">
+                    <!-- <input class="controls" type="text" name="phone_number" id="assunto" placeholder="Escriba su numero telefonico"> -->
+                    <!-- <input class="controls" type="text" name="numeroDocum" id="assunto" placeholder="Escriba su numero de documento"> -->
+                    <!-- <label for="tipoUsuario"  class="form-label">Tipo de Usuario</label>
+                    <select class="controls" name="rol" id="tipoUsuario">
+                        <option class="controls" value="admin">Administrador del sistema</option>
+                        <option class="controls" value="gerente" selected>Gerente</option>
+                        <option class="controls" value="asistente">Asistente</option>
+                    </select> -->
+                    <h4 >¿No tienes cuenta?,<a href="{% url 'registro'%}">resgístrate aquí</a></h4>
+                    <input class="botons" name="registrarse" type="submit" value="ingresar">
+                </div>
+            </form>
+            
+        </div>
+    </section>
+{% endblock %}
