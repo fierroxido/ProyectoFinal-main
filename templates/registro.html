@@ -9,24 +9,32 @@
 <section id="principal">
     <div class="contenedor">
        
-            <h1></h1>
-            <form action="#" target="" method="get" name="formDatosPersonales">
-                <label for="nombre">Nombres</label>
-                <input type="text" name="Nombres" id="nombre" placeholder="Escribe tus nombres"/>
-            
-                <label for="email" >Email</label>
-                <input type="email" name="email" id="email" placeholder="Email" required />
+            <h3>Ingresa para mostrarte todos los servicios que requieras</h3>
 
-                <label for="asunto">Contraseña</label>
-                <input type ="text" name="password" id="password" placeholder="Contraseña"/>
-            
-                <label for="asunto">Confirmar contraseña</label>
-                <input type ="text" name="confirmPassword" id="confirmPassword" placeholder="Confirmar contraseña"/>
-            
-                
-                <input type="submit" name="Registrarse" value="Registrarse"/>
+            <form action="#" target="" method="get" name="formDatosPersonales">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombres.</label>
+                    <input type="text" class="form-control" id="exampleName1"  name="Nombres"required>
+                    <div id="emailHelp" class="form-text">Ingresa tu nombre completo.</div>
+                 </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo electronico.</label>
+                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                  <div id="emailHelp" class="form-text">No compartiremos tu información con nadie.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="asunto" class="form-label">Contraseña</label>
+                  <input type="password"name="password" class="form-control" id="password"required>
+                </div>
+                <div class="mb-3">
+                    <label for="asunto" class="form-label">Confirmar contraseña</label>
+                    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirmar contraseña"required>
+                  </div>
+                <br>
+                <button type="button" class="btn btn-success" name="Registrarse value="Registrarse">Submit</button>
             </form>
-       
+            <br>
+                    
     </div>
 </section>
 {% endblock %}
