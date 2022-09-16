@@ -9,31 +9,33 @@
 </section>
 
 <section id="principal">
-    <div class="contenedor">
+    <div class="contenedor">       
+            <h3>Ingresa para mostrarte todos los servicios que requieras</h3>
 
-        <form class="row g-3" action="#" target="" method="get" name="formDatosPersonales">
-            <div class="col-md-6">
-                <label for="nombres" class="form-label">Nombres</label>
-                <input type="text" class="form-control" id="nombres" placeholder="Escriba sus nombres...">
-            </div>
-            <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Escriba su email...">
-            </div>
-            <div class="col-12">
-                <label for="contraseña" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="contraseña" placeholder="Escriba su contraseña...">
-            </div>
-            <div class="col-12">
-                <label for="contraseña" class="form-label">Contraseña</label>
-                <input type="password" class="form-control" id="confirmContraseña"
-                    placeholder="Escriba denuevo su contraseña...">
-            </div>
-
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary" value="Registrarse" />Registrarse</button>
-            </div>
-        </form>
+            <form action="#" target="" method="get" name="formDatosPersonales">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombres.</label>
+                    <input type="text" class="form-control" id="exampleName1"  name="Nombres"required>
+                    <div id="emailHelp" class="form-text">Ingresa tu nombre completo.</div>
+                 </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo electronico.</label>
+                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                  <div id="emailHelp" class="form-text">No compartiremos tu información con nadie.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="asunto" class="form-label">Contraseña</label>
+                  <input type="password"name="password" class="form-control" id="password"required>
+                </div>
+                <div class="mb-3">
+                    <label for="asunto" class="form-label">Confirmar contraseña</label>
+                    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirmar contraseña"required>
+                  </div>
+                <br>
+                <button type="button" class="btn btn-success" name="Registrarse value="Registrarse">Submit</button>
+            </form>
+            <br>
+                    
 
     </div>
 </section 
