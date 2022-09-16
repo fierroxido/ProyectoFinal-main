@@ -1,4 +1,4 @@
-from socket import NETLINK_USERSOCK
+
 from django.db import models
 
 from accounts.models import Account
