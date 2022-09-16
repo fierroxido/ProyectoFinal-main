@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<div class="mb-3 descripcion">
+    <h4>Lista de Servicios</h4>
+</div>
+
+<div class="row">
+    <table class="table">
+        <tbody>
+            {% for ser in servicios %}
+            <tr>
+                <td><img src="" alt=""></td>
+                <td>{{ser.nombre}}</td>
+                <td><a href="{% url 'servicio' ser.id %}" type="button" class="btn btn-warning">Ver detalles...</a</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock  %}
