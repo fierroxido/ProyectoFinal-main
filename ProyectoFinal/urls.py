@@ -23,6 +23,6 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('bienvenido/', views.bienvenido, name="bienvenido"),
     path('registro/', views.registro, name="registro"),
-
+    path('servicios/', views.servicios, name="servicios"),
     path('accounts/', include('accounts.url')),
 ]

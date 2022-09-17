@@ -21,7 +21,28 @@
 </head>
 
 <body>
+    <div class="container">
+        <div class="col-12 col-lg-8 offset-lg-2" id="contenedor">
+            {% include 'includes/head.html' %}
+            {% include 'includes/nav.html' %}
+            {% if alarma %}
+                <div class="alert alarma">
+                    <p>{{ alarma }}</p>
+                </div>
+            {% endif %}
+            {% if mensaje %}
+                <div class="alert mensaje">
+                    <p>{{ mensaje }}</p>
+                </div>
+            {% endif %}
+            <main>
+                {% block content %}
 
+                {% endblock %}
+                {% include 'includes/footer.html' %}
+            </main>
+        </div>
+    </div>
 
 
     {% include 'includes/nav.html' %}

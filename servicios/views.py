@@ -31,4 +31,4 @@ def agregar (request, id=NULL):
         regCarrito.cantidad +=1
         regCarrito.save()
     else:
-        regCarrito= Carrito()
+        regCarrito= Carrito(cliente=user, servicio= regServicio, precio= regServicio.precio)

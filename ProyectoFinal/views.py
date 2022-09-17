@@ -10,3 +10,6 @@ def bienvenido(request):
 
 def registro(request):
     return render(request, 'registro.html');
+
+def servicios(request):
+    return render(request, 'servicios.html');
