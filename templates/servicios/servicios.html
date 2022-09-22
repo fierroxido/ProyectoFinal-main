@@ -10,7 +10,7 @@
         <tbody>
             {% for ser in servicios %}
             <tr>
-                <td><img src="" alt=""></td>
+                <td><img src="{{ser.icono.url}}" alt=""></td>
                 <td>{{ser.nombre}}</td>
                 <td><a href="{% url 'servicio' ser.id %}" type="button" class="btn btn-warning">Ver detalles...</a</td>
             </tr>

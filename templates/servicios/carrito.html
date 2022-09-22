@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="py-5 text-center">
+    <h2>Carrito de Compras</h2>
+</div>
+
+<table class="table" style="width:90%">
+
+    <thead>
+        <tr>
+            <th>Cantidad</th>
+            <th></th>
+            <th>Servicio</th>
+            <th>Precio Unit.</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prod in carrito %}
+        <tr>
+            <th><input type="number" name="cantidad" id="" value="{{ser.cantidad}}" min="0" style="width: 80px;"></th>
+            <td><img src="{{ ser.icono.url }}" alt="X"></td>
+            <td>{{ ser.nombre }}</td>
+            <td>{{ser.valor}}/{{ser.unidad}}</td>
+            <td>{{ser.total}}</td>
+            <td>
+                <a href="{% url 'eliminar' ser.id %}" class="btn btn-danger btn-carrito">Eliminar</a>
+                <a href="{% url 'producto' ser.id %}"class="btn btn-warning btn-carrito">Detalle</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+<div class="col-6 offset-4 row justify-content-center border-bottom">
+
+    <div class="col-6 text-end">
+        <h6><strong> Subtotal</strong></h6>
+        <h6>Iva</h6>
+        <h6>Envio</h6>
+        <h6><strong>A Pagar</strong></h6>
+    </div>
+    <div class="col-6 text-end">
+        <h6><strong>${{ subtotal }}</strong></h6>
+        <h6>${{ iva }}</h6>
+        <h6>${{ envio }}</h6>
+        <h6><strong>${{ total }}</strong></h6>
+    </div>
+
+    <a href="#" class="btn btn-warning btn-carrito">Pagar</a>
+</div>
+
+
+<!-- FIN BLOQUE PRINCIPAL -->
+{% endblock %}
