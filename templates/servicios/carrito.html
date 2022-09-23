@@ -5,12 +5,15 @@
 <div class="py-5 text-center">
     <h2>Carrito de Compras</h2>
 </div>
+{% if aviso  %}
+    <h2>{{ aviso }}</h2>
+{% endif %}
 
 <table class="table" style="width:90%">
 
     <thead>
         <tr>
-            <th>Cantidad</th>
+            
             <th></th>
             <th>Servicio</th>
             <th>Precio Unit.</th>
@@ -19,12 +22,12 @@
         </tr>
     </thead>
     <tbody>
-        {% for prod in carrito %}
+        {% for ser in carrito %}
         <tr>
             <th><input type="number" name="cantidad" id="" value="{{ser.cantidad}}" min="0" style="width: 80px;"></th>
             <td><img src="{{ ser.icono.url }}" alt="X"></td>
             <td>{{ ser.nombre }}</td>
-            <td>{{ser.valor}}/{{ser.unidad}}</td>
+            <td>{{ser.valor}}</td>
             <td>{{ser.total}}</td>
             <td>
                 <a href="{% url 'eliminar' ser.id %}" class="btn btn-danger btn-carrito">Eliminar</a>
@@ -40,20 +43,18 @@
 
     <div class="col-6 text-end">
         <h6><strong> Subtotal</strong></h6>
-        <h6>Iva</h6>
-        <h6>Envio</h6>
+       
         <h6><strong>A Pagar</strong></h6>
     </div>
     <div class="col-6 text-end">
         <h6><strong>${{ subtotal }}</strong></h6>
-        <h6>${{ iva }}</h6>
-        <h6>${{ envio }}</h6>
+       
         <h6><strong>${{ total }}</strong></h6>
     </div>
-
+<br>
     <a href="#" class="btn btn-warning btn-carrito">Pagar</a>
 </div>
-
+<br><br>
 
 <!-- FIN BLOQUE PRINCIPAL -->
 {% endblock %}

@@ -7,18 +7,18 @@
 
 <div class="row">
     <div class="card col-6 offset-3">
-        <img src="" alt="">
         <div class="card-body">
             <h5 class="card-title">{{servicio.nombre}}</h5>
+            <img src="{{servicio.imagen.url}}" alt="Servicio">
             <p class="card-text">{{servicio.descripcion}}</p>
         </div>
 
         <ul class="list-group list-group-flush">
-            <li class="list-group-item">${{producto.precio}}/{{producto.unidad}}</li>
+            <li class="list-group-item">${{servicio.precio}}</li>
         </ul>
 
         <div class="card-body">
-            <a href="{% url 'verCarrito' %}" class="btn btn-warning">Agregar al carrito</a>
+            <a href="{% url 'agregarCarrito' servicio.id %}" class="btn btn-warning">Agregar al carrito</a>
         </div>
 
     </div>

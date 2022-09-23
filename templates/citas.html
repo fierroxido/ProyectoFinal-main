@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div id="borde">
+
+    <br><br>
+    <div class="form-border">
+        
+        <div class=" row mx-auto" style="width:910px;align-self: center;">
+            
+            <div class="border m-4 d-flex justify-content-center align-items-center">
+                <div class=" p-5 col-sm-6">
+                    <form class="ml-20">
+                        <div class="form-row">
+                            <div class="form-group col-md-9">
+                                <h3>Agendar Cita</h3>
+                                <label for="nombres">Nombre Completo: </label>
+                                <input type="text" class="form-control" id="nombres"
+                                    placeholder="Ingrese sus nombres...">
+                            </div>
+
+                        </div>
+                        <div class="form-group col-md-9">
+                            <label for="servicio">Servicio Requerido: </label>
+                            <select id="servicio" class="form-control">
+                                <option selected>Escoja un servicio...</option>
+                                <option>Auditoría</option>
+                                <option>Impuestos</option>
+                                <option>Revisoría Fiscal</option>
+                                <option>Outsourcing</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-9">
+                            <label for="numero">Telefono</label>
+                            <input type="number" class="form-control" id="numero"
+                                placeholder="Ingrese su numero de celular...">
+                        </div>
+                        <div class="form-group col-md-9">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email"
+                                placeholder="Ingrese su correo electronico...">
+                        </div>
+                        <div class="form-group col-md-9">
+                            <label for="horario">Horario</label>
+                            <input type="datetime-local" class="form-control" id="horario"
+                                placeholder="Ingrese la fecha y hora de la cita.">
+                        </div><br>
+                        <button type="submit" class="btn btn-warning">Continuar con el pago</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</div>
+
+{% endblock %}

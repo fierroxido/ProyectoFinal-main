@@ -14,32 +14,33 @@ def verServicios(request, id=NULL):
         return render(request,'servicios/servicios.html', context)
     else:
         id=int(id)
+
         regServicio= Servicio.objects.get(id=id)
         context={
             'servicio': regServicio,
         }
+        
         return render(request,'servicios/unServicio.html', context)
 
 
-def agregar(request, id=NULL):
+def agregarCarrito(request, id):
     id= int(id)
     user= request.user
     regServicio=Servicio.objects.get(id=id)
     existe= Carrito.objects.filter(cliente=user, servicio= regServicio, estado='carrito').exists()
-
+    print('-----------------------')
+    print(existe)
+    context={}
     if existe:
-        regCarrito= Carrito.objects.get(cliente=user, servicio= regServicio, estado='carrito')
-        regCarrito.cantidad +=1
-        regCarrito.save()
+        context['aviso']= 'El servicio ya fue agregado al carrito'
     else:
         regCarrito= Carrito(cliente=user, servicio= regServicio, precio= regServicio.precio)
         regCarrito.save()
 
     listaServicios = Servicio.objects.all()
-    context = {
-            'servicios': listaServicios,
-        }
-    return render(request, 'servicios/servicios.html', context)
+    context[ 'servicios']= listaServicios
+
+    return render(request, 'servicios/carrito.html', context)
 
 
 
@@ -47,7 +48,7 @@ def verCarrito(request):
     regUser = request.user
     carrito = Carrito.objects.filter(cliente=regUser, estado='carrito')
     # Recorrer elementos del carrito para calcular totales
-
+   
     listaCarrito = []
     total = 0
     for ser in carrito:
@@ -56,7 +57,7 @@ def verCarrito(request):
 			'icono': ser.servicio.icono,
 			'nombre': ser.servicio.nombre,
 			'valor': ser.servicio.precio,
-			'unidad': ser.servicio.unidad	,
+			
 			'total': int(ser.cantidad)	* int(ser.servicio.precio),
 			'id': ser.id,
 	    }
@@ -68,15 +69,13 @@ def verCarrito(request):
     context = {
         'carrito':  listaCarrito,
         'subtotal': total,
-        'iva': total * 0.19,
-        'envio': 8000,
-        'total': total * 1.19 + 8000,
+        'total': total ,
     }
  
     return render(request, 'servicios/carrito.html', context)
 
 def eliminarCarritoItem(request, id):
-    regUser= request.user
+    #regUser= request.user
     regCarrito= Carrito.objects.get(id=id)
     regCarrito.estado= 'cancelado'
     regCarrito.save()

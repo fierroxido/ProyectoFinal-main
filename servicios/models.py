@@ -12,8 +12,8 @@ class Servicio(models.Model):
     imagen= models.ImageField(upload_to='servicios')
     icono= models.ImageField(upload_to='iconos')
 
-def __str__(self):
-    return self.nombre
+    def __str__(self):
+        return self.nombre
 
 
 class Carrito(models.Model):
@@ -25,6 +25,9 @@ class Carrito(models.Model):
     cliente= models.ForeignKey(Account, on_delete=models.CASCADE, null=False)
     servicio= models.ForeignKey(Servicio, on_delete=models.CASCADE, null=False)
     precio= models.DecimalField(max_digits=8, decimal_places=2)
-    cantidad= models.IntegerField(default=1, null=False)
+    #cantidad= models.IntegerField(default=1, null=False)
     estado=models.CharField(max_length=15, choices=ESTADOS, default='carrito')
-    fecha= models.DateTimeField(auto_now_add=True)
+    fecha= models.DateTimeField(auto_now_add=True,null=True)
+
+    def __str__(self):
+        return self.cliente
