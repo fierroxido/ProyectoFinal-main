@@ -1,6 +1,10 @@
 #borde {
     border-bottom: 8px solid #efb810;
 }
+#bordef{
+    border-top: 8px solid #efb810;
+    padding: 5px;
+}
 
 body {
     font: 15px Arial, Helvetica, Sans-serif;
