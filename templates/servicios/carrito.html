@@ -24,14 +24,14 @@
     <tbody>
         {% for ser in carrito %}
         <tr>
-            <th><input type="number" name="cantidad" id="" value="{{ser.cantidad}}" min="0" style="width: 80px;"></th>
+            <th><input type="number" name="cantidad" id="" min="1" max="1" style="width: 80px;"></th>
             <td><img src="{{ ser.icono.url }}" alt="X"></td>
-            <td>{{ ser.nombre }}</td>
+            <td>{{ser.nombre }}</td>
             <td>{{ser.valor}}</td>
             <td>{{ser.total}}</td>
             <td>
                 <a href="{% url 'eliminar' ser.id %}" class="btn btn-danger btn-carrito">Eliminar</a>
-                <a href="{% url 'producto' ser.id %}"class="btn btn-warning btn-carrito">Detalle</a>
+                <a href="{% url 'servicio' ser.id %}"class="btn btn-warning btn-carrito">Detalle</a>
             </td>
         </tr>
         {% endfor %}
@@ -52,7 +52,7 @@
         <h6><strong>${{ total }}</strong></h6>
     </div>
 <br>
-    <a href="#" class="btn btn-warning btn-carrito">Pagar</a>
+    <a href="{% url 'citas' %}" class="btn btn-warning btn-carrito">Pagar</a>
 </div>
 <br><br>
 

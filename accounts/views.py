@@ -6,17 +6,18 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
-def registro(request):
-    return render(request, 'registro.html');
+
 
 
 def registro(request):
     context ={}
     if request.method == 'POST':
+        
         password = request.POST['password']
         confirmPassword = request.POST['confirmPassword']
-        username = request.POST['username']
+        nombres = request.POST['Nombres']
         email = request.POST['email']
+        username= email.split()[0]
     
         #Validacion campos
         ok = True

@@ -12,15 +12,16 @@
     <div class="contenedor">       
             <h3>Ingresa para mostrarte todos los servicios que requieras</h3>
 
-            <form action="#" target="" method="get" name="formDatosPersonales">
+            <form action="{% url 'registro' %}" target="" method="POST" >
+              {% csrf_token %}
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombres.</label>
-                    <input type="text" class="form-control" id="exampleName1"  name="Nombres"required>
+                    <input type="text" class="form-control" id="exampleName1"  name="Nombres" required>
                     <div id="emailHelp" class="form-text">Ingresa tu nombre completo.</div>
                  </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Correo electronico.</label>
-                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" required>
                   <div id="emailHelp" class="form-text">No compartiremos tu información con nadie.</div>
                 </div>
                 <div class="mb-3">
@@ -32,7 +33,7 @@
                     <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="Confirmar contraseña"required>
                   </div>
                 <br>
-                <button type="button" class="btn btn-success" name="Registrarse value="Registrarse">Registrarse</button>
+                <input type="submit" class="btn btn-warning" name="Registrarse value="Registrarse"></input>
             </form>
             <br>
                     

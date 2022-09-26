@@ -4,6 +4,12 @@ from django.shortcuts import render
 from .models import Carrito, Servicio
 
 # Create your views here.
+
+def citas(request):
+    context={}
+    return render(request,'citas.html', context)
+
+
 def verServicios(request, id=NULL):
 
     if not id:
@@ -11,6 +17,7 @@ def verServicios(request, id=NULL):
         context={
             'servicios':listaServicios,
         }
+
         return render(request,'servicios/servicios.html', context)
     else:
         id=int(id)
@@ -26,22 +33,27 @@ def verServicios(request, id=NULL):
 def agregarCarrito(request, id):
     id= int(id)
     user= request.user
-    regServicio=Servicio.objects.get(id=id)
-    existe= Carrito.objects.filter(cliente=user, servicio= regServicio, estado='carrito').exists()
-    print('-----------------------')
-    print(existe)
+
     context={}
-    if existe:
-        context['aviso']= 'El servicio ya fue agregado al carrito'
+    if user.id != None:
+        regServicio=Servicio.objects.get(id=id)
+
+        existe= Carrito.objects.filter(cliente=user, servicio= regServicio, estado='carrito').exists()
+
+        if existe:
+            context['aviso']= 'El servicio ya fue agregado al carrito'
+        else:
+            regCarrito= Carrito(cliente=user, servicio= regServicio, precio= regServicio.precio)
+            regCarrito.save()
+
+        listaServicios = Servicio.objects.all()
+        context[ 'servicios']= listaServicios
     else:
-        regCarrito= Carrito(cliente=user, servicio= regServicio, precio= regServicio.precio)
-        regCarrito.save()
+         context['aviso']= 'El usuario no está permitido para hacer esta acción, debe registrarse o iniciar sesión.'
+         return render(request, 'home.html', context)
 
-    listaServicios = Servicio.objects.all()
-    context[ 'servicios']= listaServicios
-
-    return render(request, 'servicios/carrito.html', context)
-
+   # return render(request, 'servicios/carrito.html', context)
+    return verCarrito(request)
 
 
 def verCarrito(request):
@@ -53,12 +65,12 @@ def verCarrito(request):
     total = 0
     for ser in carrito:
         unServicio={
-			'cantidad': ser.cantidad,
+			
 			'icono': ser.servicio.icono,
 			'nombre': ser.servicio.nombre,
 			'valor': ser.servicio.precio,
 			
-			'total': int(ser.cantidad)	* int(ser.servicio.precio),
+			'total': int(ser.servicio.precio),
 			'id': ser.id,
 	    }
  
