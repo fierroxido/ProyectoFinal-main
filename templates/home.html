@@ -1,124 +1,162 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-{% if aviso  %}
-    <h2>{{ aviso }}</h2>
+{% if aviso %}
+<h2>{{ aviso }}</h2>
 {% endif %}
 
 <br>
 <main>
+    <h1 class="text-center text-danger">CONTADURÍA A TU ALCANCE</h1>
     <section>
-        <div class="row">
-            <div class="p-2 col-12 md-8">
-                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{% static 'img/carousel1.png'%}" class=" img-fluid rounded mx-auto d-block" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'img/carousel2.png'%}" class="img-fluid rounded mx-auto d-block" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'img/carousel3.png'%}" class="img-fluid rounded mx-auto d-block" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="{% static 'img/carousel4.png'%}" class="img-fluid rounded mx-auto d-block" alt="...">
+        <div class="container">
+            <div class="col-12 col-lg-8 offset-lg-2" id="contenedor">
+                <div class="row">
+                    <div class="p-2 col-12 md-8">
+                        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner shadow-lg p-1 mb-1 bg-body rounded">
+                                <div class="carousel-item active">
+                                    <img src="{% static 'img/carousel1.png'%}"
+                                        class=" img-fluid rounded mx-auto d-block" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'img/carousel2.png'%}" class="img-fluid "
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'img/carousel3.png'%}" class="img-fluid "
+                                        alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{% static 'img/carousel4.png'%}" class="img-fluid "
+                                        alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Anterior</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Siguiente</span>
+                            </button>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
                 </div>
             </div>
         </div>
 
-
     </section>
     <br><br>
-        <div id="borde">
-             <div class="text-center">
-                <section id="about" class="about-section-padding">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-12 col-12">
-                                <div class="about-img">
-                                    <img src="{% static 'img/main.png'%}" alt="" class="img-fluid">
+    
+    <div id="borde">
+        <div class="text-center">
+            <section id="about" class="about-section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 col-12">
+                            <div class="about-img">
+                                <img src="{% static 'img/bmain.png'%}" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5 ">
+                            <div class="about-text">
+                                
+                                <h2></h2>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, praesentium
+                                    similique ut alias
+                                    ipsam facilis aspernatur vitae dolorem, dolor dolorum eligendi ducimus quisquam iste
+                                    totam hic.
+                                    Corrupti explicabo consequuntur iusto?</p>
+                                   
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br><br>
+            <br>
+            <!--Services section-->
+            <section id="services" class="services section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-header text-center pb-5">
+                                <h2 class="titlemh2">Nuestros Valores</h2>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-white text-center bg-dark pb-2">
+                                <div class="card-body">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-world" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#efb810" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <circle cx="12" cy="12" r="9" />
+                                        <line x1="3.6" y1="9" x2="20.4" y2="9" />
+                                        <line x1="3.6" y1="15" x2="20.4" y2="15" />
+                                        <path d="M11.5 3a17 17 0 0 0 0 18" />
+                                        <path d="M12.5 3a17 17 0 0 1 0 18" />
+                                      </svg>
+                                    <h3 class="card-title">Liderar el Camino</h3>
+                                    <p class="lead">F&E CORP no sólo está liderando la profesión, sino también reinventándola para el futuro. También estamos comprometidos a crear oportunidades y liderar el camino hacia un mundo más.</p>
+                                    <button class="btn btn-warning text-dark">Read More</button>
                                 </div>
                             </div>
-                            <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5 ">
-                                <div class="about-text">
-                                    <h2>We provide......</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, praesentium similique ut alias
-                                        ipsam facilis aspernatur vitae dolorem, dolor dolorum eligendi ducimus quisquam iste totam hic.
-                                        Corrupti explicabo consequuntur iusto?</p>
-                                    <a href="" class="btn btn-warning">Learn more</a>
-                
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-white text-center bg-dark pb-2">
+                                <div class="card-body">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trophy" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#efb810" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
+                                        <line x1="7" y1="4" x2="17" y2="4" />
+                                        <path d="M17 4v8a5 5 0 0 1 -10 0v-8" />
+                                        <circle cx="5" cy="9" r="2" />
+                                        <circle cx="19" cy="9" r="2" />
+                                      </svg>
+                                    <h3 class="card-title">Servir con Integridad</h3>
+                                    <p class="lead text-align">F&E CORP actúa éticamente y con integridad, nos hemos ganado la confianza de clientes y del público con nuestras acciones. Defender esa confianza es nuestra responsabilidad más importante.</p>
+                                    <button class="btn btn-warning text-dark">Read More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-12 col-lg-4">
+                            <div class="card text-white text-center bg-dark pb-2">
+                                <div class="card-body">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-puzzle-2" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#efb810" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <rect x="4" y="4" width="16" height="16" rx="2" />
+                                        <path d="M12 4v2.5a0.5 .5 0 0 1 -.5 .5a1.5 1.5 0 0 0 0 3a0.5 .5 0 0 1 .5 .5v1.5" />
+                                        <path d="M12 12v1.5a0.5 .5 0 0 0 .5 .5a1.5 1.5 0 0 1 0 3a0.5 .5 0 0 0 -.5 .5v2.5" />
+                                        <path d="M20 12h-2.5a0.5 .5 0 0 1 -.5 -.5a1.5 1.5 0 0 0 -3 0a0.5 .5 0 0 1 -.5 .5h-1.5" />
+                                        <path d="M12 12h-1.5a0.5 .5 0 0 0 -.5 .5a1.5 1.5 0 0 1 -3 0a0.5 .5 0 0 0 -.5 -.5h-2.5" />
+                                      </svg>
+                                    <h3 class="card-title">Compromiso Mutuo</h3>
+                                    <p class="lead">En F&E CORP nos cuidamos los unos a los otros mientras que priorizamos el respeto, la equidad, el desarrollo y el bienestar de todos, gracias por ello que nos caracterizamos con nuestro publico</p>
+                                    <button class="btn btn-warning text-dark">Read More</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                <br>
-                <!--Services section-->
-                <section id="services" class="services section-padding">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="section-header text-center pb-5">
-                                    <h2>Our services</h2>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur corporis doloremque tempore labore, quam vel, numquam cupiditate earum laborum saepe quisquam nulla totam expedita velit architecto porro officiis ex sed?</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-12 col-lg-4">
-                                <div class="card text-white text-center bg-dark pb-2">
-                                    <div class="card-body">
-                                        <i class="bi bi-stickies-fill"></i>
-                                        <h3 class="card-title">Best Quality</h3>
-                                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quos iure voluptatibus quibusdam, dolor sit repellat explicabo consequatur ullam impedit. Consectetur omnis, sint facere repellendus beatae eos numquam minima sequi.</p>
-                                        <button class="btn btn-warning text-dark">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-12 col-lg-4">
-                                <div class="card text-white text-center bg-dark pb-2">
-                                    <div class="card-body">
-                                        <i class="bi bi-stickies-fill"></i>
-                                        <h3 class="card-title">Integrity</h3>
-                                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quos iure voluptatibus quibusdam, dolor sit repellat explicabo consequatur ullam impedit. Consectetur omnis, sint facere repellendus beatae eos numquam minima sequi.</p>
-                                        <button class="btn btn-warning text-dark">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-12 col-lg-4">
-                                <div class="card text-white text-center bg-dark pb-2">
-                                    <div class="card-body">
-                                        <i class="bi bi-stickies-fill"></i>
-                                        <h3 class="card-title">Sustainability</h3>
-                                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quos iure voluptatibus quibusdam, dolor sit repellat explicabo consequatur ullam impedit. Consectetur omnis, sint facere repellendus beatae eos numquam minima sequi.</p>
-                                        <button class="btn btn-warning text-dark">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section><br><br>
-                
-                
+                </div>
+                <br><br><br>
+                <h2 class="text-center">"No queremos ser los más grandes,seremos los mejores"</h2>
+            </section><br><br>
+            
+
+
         </div>
         <div class="text-center">
             <img src="{% static 'img/JuanCamilo.png'%}" class="rounded"
                 style="width:max-content ;margin: 50px;width: 40%;" alt="..."> <br>
-     </div> <br>
+        </div> <br>
     </div>
-    
+
 </main>
 {% endblock %}
