@@ -6,21 +6,6 @@
     padding: 5px;
 }
 
-body {
-    font: 15px Arial, Helvetica, Sans-serif;
-    padding: 0px;
-    margin: 30px;
-    background-color: #930001;
-}
-
-
-footer {
-    padding: 20px;
-    color: #ffff;
-    background-color: #930001;
-    text-align: center;
-}
-
 #letra {
 
     font-size: 35px;
@@ -51,18 +36,122 @@ footer {
 
 }
 
-h1{
-    text-align:center;
-    color: #930001;
-    
-     
-}
-h3{
-    text-align:center;
-    color: #930001;
-    
-}
+
 
 .imagenes{
     width: 100%;
+}
+
+#borde {
+    border-bottom: 8px solid #efb810;
+}
+
+
+
+#letra {
+
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.map {
+    width: 612px;
+}
+.mapa {
+    width: 650px;
+    padding: 5px 15px;
+    border: #efb810 5px solid;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #efb810;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section-padding {
+    padding : 100px 0 ;
+ }
+ .carousel-item {
+    height : 100vh ;
+    min-height : 300px ;
+ }
+ .carousel-caption {
+    bottom : 220px ;
+    z-index : 2 ;
+ }
+   
+ .carousel-caption h5 {
+    font-size : 45px ;
+    text-transform : uppercase ;
+    letter-spacing: 2px;
+    margin-top: 25px;
+ }
+
+ .carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 19px;
+    line-height: 1.9;
+
+ }
+ .carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:black ;
+    z-index:1;
+ }
+
+
+
+ .services .card-body i{
+  font-size: 50px;  
+
+ }
+
+
+ /*  Responsive css*/
+@media only scree and (min-width:768px) and (max-width:991px){
+    .carousel-caption{
+        bottom: 370px;
+    }
+    .carousel-caption p{
+        width:100%;
+    }
+}
+ @media only screen and (max-width:767px){
+    .navbar-nav{
+        text-align:center;
+    }
+    .carousel-caption{
+        bottom:125px;
+    }
+    .carousel-caption h5{
+        font-size: 17px;
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.6;
+        font-size: 12px;
+
+    }
+
+
 }
