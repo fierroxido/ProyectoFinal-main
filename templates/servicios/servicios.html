@@ -1,18 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
 <br>
-<div class="mb-3 descripcion">
+<div class="mb-3 descripcion text-center">
     <h4>Lista de Servicios</h4>
 </div>
 
-<div class="row">
-    <table class="table">
+<div class="row ">
+    <table class="table align-items-stretch ">
+        
         <tbody>
             {% for ser in servicios %}
             <tr>
-                <td><img src="{{ser.icono.url}}" alt="X"></td>
-                <td>{{ser.nombre}}</td>
-                <td><a href="{% url 'servicio' ser.id %}" type="button" class="btn btn-warning">Ver detalles...</a</td>
+                <td class="text-center"><img src="{{ser.icono.url}}" alt="X"></td>
+                <td class="text-left">{{ser.nombre}}</td>
+                <td class="text-left"><a href="{% url 'servicio' ser.id %}" type="button" class="btn btn-warning">Ver detalles...</a</td>
             </tr>
             {% endfor %}
         </tbody>

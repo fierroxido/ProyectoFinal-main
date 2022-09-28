@@ -59,12 +59,16 @@
     color: #930001;
     text-decoration:overline;
     
+}
+.titlemh1{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #930001;
     
 }
 
-.h2{
-    color: #930001;
-}
+
 
 
 
