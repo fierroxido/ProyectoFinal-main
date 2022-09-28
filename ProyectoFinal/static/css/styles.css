@@ -2,8 +2,8 @@
     border-bottom: 5px solid #efb810;
 }
 #bordef{
-    border-top: 8px solid #efb810;
-    padding: 5px;
+    border-top: 5px solid #efb810;
+    
 }
 
 #letra {
@@ -42,28 +42,10 @@
     width: 100%;
 }
 
-#borde {
-    border-bottom: 8px solid #efb810;
-}
 
 
 
-#letra {
 
-    font-size: 35px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.map {
-    width: 612px;
-}
-.mapa {
-    width: 650px;
-    padding: 5px 15px;
-    border: #efb810 5px solid;
-    border-radius: 20px;
-    box-shadow: 0px 0px 10px #efb810;
-
-}
 
 
 .services .card-body i{
