@@ -1,0 +1,13 @@
+
+{% autoescape off %}
+
+Estimado {{nombre}}:  
+
+Por favor utilice el enlace suministrado para activar su cuenta:
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+Gracias,
+
+F&ECORP.
+
+{% endautoescape %}
