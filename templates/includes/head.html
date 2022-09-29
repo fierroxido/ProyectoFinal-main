@@ -1,8 +1,8 @@
 {% load static%}
-<div class="col-12" id="nombreUsuario">
+<div class="col-12 p-2" id="nombreUsuario">
     {% if user.first_name is None %}
-    <h4>Bienvenido Visitante</h4>
+    <h4 class="p-2">Bienvenido Visitante</h4>
     {% else %}
-    <h4>{{user.first_name}} {{user.last_name}}</h4>
+    <h4 class="p-2 md-2"><b>{{user.first_name}} {{user.last_name}}</b></h4>
     {% endif %}
 </div>

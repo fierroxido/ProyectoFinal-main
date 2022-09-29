@@ -2,15 +2,15 @@
 {% block content %}
 <br>
 <div class="mb-3 descripcion">
-    <h4>Lista de Servicios</h4>
+    <h4 class="text-center titleservices ">Lista de Servicios</h4>
 </div>
 
 <div class="row">
     <div class="card col-6 offset-3">
         <div class="card-body">
             <h5 class="card-title">{{servicio.nombre}}</h5>
-            <img src="{{servicio.imagen.url}}" alt="Servicio" class="imagenes" >
-            <p class="card-text">{{servicio.descripcion}}</p>
+            <img src="{{servicio.imagen.url}}" alt="Servicio" class="imagenes" ><br>
+            <br><p class="card-text">{{servicio.descripcion}}</p>
         </div>
 
         <ul class="list-group list-group-flush">
